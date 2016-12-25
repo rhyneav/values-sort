@@ -12,23 +12,34 @@ $.ajax({
     success:  function(data) {
         dataObj = data.values;
         $('#btn_start').prop('disabled', false);
+
+        $('#lbl_valuesLeft').text(dataObj.length - index)
+
+        
     }
 });
 
 $('#btn_start').click(function() {
-    // Reload the page when restarting
     if (very.length > 0) {
         location.reload();
     }
 
-    $('#btn_very').prop('disabled', false);
-    $('#btn_middle').prop('disabled', false);
-    $('#btn_not').prop('disabled', false);
+    $('.labels').animate({
+        opacity: 0
+    }, 300, function() {
+        $('#btn_very').prop('disabled', false);
+        $('#btn_middle').prop('disabled', false);
+        $('#btn_not').prop('disabled', false);
 
-    updateScreen();
-    console.log(dataObj);
+        updateScreen();
+        console.log(dataObj);
 
-    $('#btn_start').prop('disabled', true);
+        $('#btn_start').prop('disabled', true);
+
+        $('.labels').animate({
+            opacity: 1
+        }, 300);
+    });
 });
 
 $('#btn_very').click(function() {
@@ -44,9 +55,21 @@ $('#btn_not').click(function() {
 
 var increment = function(data) {
     index++;
-    console.log(index);
-    console.log(very);
-    shouldReset();
+
+    $('.labels').animate({
+        opacity: 0
+    }, 300, function() {
+        console.log(index);
+        console.log(very);
+        $('.labels').animate({
+            opacity: 1
+        }, 300);
+        shouldReset();
+
+        $('#lbl_valuesLeft').text(dataObj.length - index);
+    });
+
+
 };
 
 var shouldReset = function() {
@@ -58,8 +81,16 @@ var shouldReset = function() {
             $('#btn_middle').prop('disabled', true);
             $('#btn_not').prop('disabled', true);
 
-            $('#btn_start').text('AGAIN');
+            $('#btn_start').text('Again');
             $('#btn_start').prop('disabled', false);
+
+            $('#btn_start').animate({
+                opacity: 100
+            }, 100);
+
+            $('#lbl_top').show(1000);
+
+            $('.labels').addClass('border');
         } else {
             dataObj = very;
             index = 0;
@@ -80,3 +111,11 @@ var updateScreen = function() {
     $('#value').text(dataObj[index].value);
     $('#description').text(dataObj[index].description);
 };
+
+$('#btn_help').click(function() {
+    $('#txt_help').toggle('slow');
+
+    $('html, body').animate({ 
+        scrollTop: $(document).height()-$(window).height()}
+    );
+})
