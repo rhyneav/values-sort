@@ -1,19 +1,25 @@
 <html>
     <head>
+        <!-- python -m http.server 8000 -->
         <link rel="stylesheet" href="./app.css" type="text/css" />
     </head>
     <body>
-        <h4>Round: <span id="lbl_round">1</span></h4>
+        <h4 id="ttl_round">Round: <span id="lbl_round">1</span></h4>
 
-        <h2 id="value">Value</h2>
-        <h3 id="description">Description</h3>
+        <div class="labels">
+            <h2 id="value">Values will appear here</h2>
+            <h3 id="description">Descriptions to help will show up here</h3>
+        </div>
 
-        <button id="btn_start" disabled>START</button>
-
-        <button id="btn_very" disabled>VERY IMPORTATNT TO ME</button>
-        <button id="btn_middle" disabled>IMPORTATNT TO ME</button>
-        <button id="btn_not" disabled>NOT IMPORTATNT TO ME</button>
-
+        <div class="buttons">
+            <button id="btn_start" disabled>START</button>
+            <br />
+            <button id="btn_very" disabled>VERY IMPORTATNT TO ME</button>
+            <br />
+            <button id="btn_middle" disabled>IMPORTATNT TO ME</button>
+            <br />
+            <button id="btn_not" disabled>NOT IMPORTATNT TO ME</button>
+        </div>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="./app.js"></script>
     </body>

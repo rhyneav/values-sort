@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400');
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    font-style: italic;
+}
+
+h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+#ttl_round {
+    text-align: right;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 56px;
+}
+
+.labels {
+    text-align: center;
+}
+
+button {
+    background-color: #287eb6;
+  
+    padding: 0 27px;
+    display: inline-block;
+    height: 54px;
+    line-height: 54px;
+    margin: 0.3em;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 27px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    border: none; 
+    font-size: 15px;
+    text-align: center;
+
+    color: white;
+}
+
+button:link, button:visited {
+    color: #fff;
+}
+
+button:hover {
+    color: #fff;
+    box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+button:disabled {
+    color: #efefef;
+    background-color: #777777; 
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    cursor: default;
+}
