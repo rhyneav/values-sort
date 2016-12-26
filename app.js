@@ -113,9 +113,8 @@ var updateScreen = function() {
 };
 
 $('#btn_help').click(function() {
-    $('#txt_help').toggle('slow');
-
-    $('html, body').animate({ 
-        scrollTop: $(document).height()-$(window).height()}
-    );
+    $('#txt_help').toggle(300);
+    if ($("#txt_help").is(':visible')) {
+        $("html, body").animate({scrollTop: $("#txt_help").offset().top});
+    }
 })
