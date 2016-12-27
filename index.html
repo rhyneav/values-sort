@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./app.css" type="text/css" />
+
+        <meta name="title" content="Values Sorter" />
+        <meta name="description" content="Sort and determine the thing you value most" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="counters">
+                <h4 id="ttl_round">Round: <span id="lbl_round">1</span></h4>
+                <h4 id="ttl_values">Values remaining: <span id="lbl_valuesLeft">1</span></h4>
+            </div>
+
+            <div class="labels">
+                <h5 id="lbl_top">Your top value is...</h5>
+                <h2 id="value"><u>Values</u> will appear here</h2>
+                <h3 id="description"><u>Descriptions</u> to help will show up here</h3>
+                <div class='share'>
+                    <p>Share:</p>
+                    <a href="https://twitter.com/intent/tweet?url=&text=Find%20your%20top%20personal%20value%20at%20https%3A%2F%2Fvlaservi.ch%2Fvalues-sorter" target="_blank"><img src="./img/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvlaservi.ch%2Fvalues-sorter" target="_blank"><img src="./img/facebook.png" alt="Facebook"></a>
+                    <a href="mailto:email@domain.com?subject=Find%20Your%20Top%20Personal%20Value" target="_blank"><img src="./img/email.png" alt="Email"></a>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="btn_start" disabled>Start</button>
+                <br />
+                <button id="btn_very" disabled><u>Very</u> important to me</button>
+                <br />
+                <button id="btn_middle" disabled><u>Somewhat</u> important to me</button>
+                <br />
+                <button id="btn_not" disabled><u>Not</u> important to me</button>
+                <br />
+                <button id="btn_help">Help</button>
+            </div>
+            <div id="txt_help">
+                <p>
+                    Sort the values based on if they are very important to you, somewhat important to you or not important at all. After going through the list of values in round one, you will then go through the values you originally described as very important and re-ranking them. Keep repeating this process until you only have one value left: <u>what you value most</u>.
+                </p>
+                <p class="attribution">
+                    Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+                </p>
+                <p class="source">
+                    View the source code at <a href="https://github.com/rhyneav/values-sort">Github</a>.
+                </p>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
+
