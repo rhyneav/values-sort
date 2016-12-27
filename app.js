@@ -6,6 +6,8 @@ var index = 0;
 var round = 1;
 var dataObj = {};
 
+var done = false;
+
 $.ajax({
     url:      'values.json',
     dataType: 'json',
@@ -20,7 +22,7 @@ $.ajax({
 });
 
 $('#btn_start').click(function() {
-    if (very.length > 0) {
+    if (done) {
         location.reload();
     }
 
@@ -74,7 +76,19 @@ var increment = function(data) {
 
 var shouldReset = function() {
     if (index == dataObj.length) {
-        if (very.length == 1) {
+        if (very.length == 0) {
+            $('#btn_very').prop('disabled', true);
+            $('#btn_middle').prop('disabled', true);
+            $('#btn_not').prop('disabled', true);
+
+            $('#btn_start').text('Again');
+            $('#btn_start').prop('disabled', false);
+
+            $('#value').text('No important values? :(');
+            $('#description').text('Try again!');
+
+            done = true;
+        } else if (very.length == 1) {
             console.log('top value', very[0]);
 
             $('#btn_very').prop('disabled', true);
@@ -84,13 +98,12 @@ var shouldReset = function() {
             $('#btn_start').text('Again');
             $('#btn_start').prop('disabled', false);
 
-            $('#btn_start').animate({
-                opacity: 100
-            }, 100);
-
-            $('#lbl_top').show(1000);
+            $('#lbl_top').show(300);
+            $('.share').show(300);
 
             $('.labels').addClass('border');
+
+            done = true;
         } else {
             dataObj = very;
             index = 0;
