@@ -31,17 +31,24 @@ var finishEarly = function() {
     done = true;
     $('#btn_start').text('Again!')
 
-    $('#value').hide();
-    $('#description').hide();
 
-    for (i in very) {
-        
-        $('#many_values').append('<h5 class="early_value">Value ' + (+i + 1) + '</h5>');
-        $('#many_values').append('<h2>' + very[i].value + '</h2>');
-        $('#many_values').append('<h3>' + very[i].description + '</h3>');
+
+    if (very.length > 0) {
+        $('#value').hide();
+        $('#description').hide();
+        $('#lbl_top').text('Your top values are...');
+        for (i in very) {
+            
+            $('#many_values').append('<h5 class="early_value">Value ' + (+i + 1) + '</h5>');
+            $('#many_values').append('<h2>' + very[i].value + '</h2>');
+            $('#many_values').append('<h3>' + very[i].description + '</h3>');
+        }
+    } else {
+        $('#value').text('No important values? :(');
+        $('#description').text('Try again!');
     }
 
-        $('#lbl_top').text('Your top values are...');
+        
         $('#many_values').show(300);
         $('#lbl_top').show(300);
         $('.labels').addClass('border');
