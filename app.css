@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400');
 
+body {
+    background-color: #f9efd6;
+}
+
 h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
@@ -74,6 +78,21 @@ p {
     display: none;
 }
 
+h5 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    font-style: italic;
+} 
+
+#many_values {
+    display: none;
+}
+
+.early_value {
+    margin-top: 64px;
+}
+
 button {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
@@ -118,6 +137,18 @@ button:hover {
 button:active {
     background-color: #2370a0;
     box-shadow: 0px 3px 7px rgba(0,0,0,0.5);
+}
+
+.colored #btn_very {
+    background-color: #1FDA9A;
+}
+
+.colored #btn_middle {
+    background-color: #E8B71A;
+}
+
+.colored #btn_not {
+    background-color: #DB3340;
 }
 
 button:disabled {
