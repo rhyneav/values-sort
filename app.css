@@ -52,7 +52,7 @@ p {
 }
 
 .border {
-    border: 8px solid #287eb6;
+    border: 8px solid #28ABE3;
 
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -78,7 +78,7 @@ button {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 
-    background-color: #287eb6;
+    background-color: #28ABE3;
   
     padding: 0 32px;
     display: inline-block;

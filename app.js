@@ -13,6 +13,9 @@ $.ajax({
     dataType: 'json',
     success:  function(data) {
         dataObj = data.values;
+
+        $('#btn_start').text('Start');
+
         $('#btn_start').prop('disabled', false);
 
         $('#lbl_valuesLeft').text(dataObj.length - index)
@@ -34,7 +37,6 @@ $('#btn_start').click(function() {
         $('#btn_not').prop('disabled', false);
 
         updateScreen();
-        console.log(dataObj);
 
         $('#btn_start').prop('disabled', true);
 
@@ -61,8 +63,6 @@ var increment = function(data) {
     $('.labels').animate({
         opacity: 0
     }, 300, function() {
-        console.log(index);
-        console.log(very);
         $('.labels').animate({
             opacity: 1
         }, 300);
@@ -89,7 +89,8 @@ var shouldReset = function() {
 
             done = true;
         } else if (very.length == 1) {
-            console.log('top value', very[0]);
+            $('#value').text(very[0].value);
+            $('#description').text(very[0].description);
 
             $('#btn_very').prop('disabled', true);
             $('#btn_middle').prop('disabled', true);
