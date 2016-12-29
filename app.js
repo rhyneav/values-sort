@@ -39,8 +39,6 @@ var finishEarly = function() {
         $('#many_values').append('<h5 class="early_value">Value ' + (+i + 1) + '</h5>');
         $('#many_values').append('<h2>' + very[i].value + '</h2>');
         $('#many_values').append('<h3>' + very[i].description + '</h3>');
-        console.log(very[i].value);
-        console.log(very[i].description);
     }
 
         $('#lbl_top').text('Your top values are...');
